@@ -15,10 +15,12 @@ function App() {
       <Navbar/>
         <ContinentContext.Provider value={continentState}>
           <SearchContext.Provider value={searchState}>
+            
             <Routes>
                 <Route path='/countries-api-react' element={<AllCountries/>}/>
                 <Route path='/countries-api-react/:countryName' element={<SingleCountry/>}/>
             </Routes>
+
           </SearchContext.Provider>
         </ContinentContext.Provider>
     </div>
