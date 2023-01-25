@@ -4,7 +4,7 @@ import "../style/card.css";
 function Card(country) {
   return (
     //{ "/country/" + country.title.replace(/ /g, "_")}
-    <Link className="country__card" to={ "/country/" + country.title}>
+    <Link className="country__card" to={ "/countries-api-react/" + country.title}>
       <div className="flag-img">
         <img src={country.imgSrc} />
       </div>

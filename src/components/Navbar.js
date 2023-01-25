@@ -23,7 +23,7 @@ function Navbar() {
 
   return <header>
     <nav>
-      <Link to="/">ابحث عن الدولة</Link>
+      <Link to="/countries-api-react">ابحث عن الدولة</Link>
       <div className="main-theme" onClick={changeTheme}>
         <span className="material-symbols-outlined">dark_mode</span>
         الوضع المظلم
