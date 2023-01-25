@@ -1,13 +1,78 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600&display=swap");
+
+:root {
+  --body-color: #fafafa;
+  --body-dark: #202d36;
+  --white-color: #ffffff;
+  --dark-color: #2b3743;
+  --font-black: #161618;
+  --black-shadow: #79797942;
+  --dark-shadow: #12121242;
+  --hovering-white: #e8e8e8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+body.dark {
+  color: var(--white-color);
+  background-color: var(--body-dark);
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-black);
+}
+
+body.dark a {
+  color: var(--white-color);
+}
+
+section {
+  padding: 30px 45px;
+}
+
+/* Google Icons */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+/* Sidebar */
+::-webkit-scrollbar {
+  width: 10px;
+  transition-delay: 1s;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d1d1d156;
+  border-radius: 2px;
+  transition: height 2s, width 3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d1d1d18a;
+}
+/* Grid System */
+.grid-system {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 270px));
+  margin-top: 40px;
+  gap: 50px;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-system .not__found {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }

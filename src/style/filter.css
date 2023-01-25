@@ -1,0 +1,118 @@
+/* Filter */
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .filter {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+}
+
+.filter form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--white-color);
+  position: relative;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px 1px var(--black-shadow);
+}
+
+.filter form input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+body.dark .filter form {
+  box-shadow: 0px 3px 8px 1px var(--dark-shadow);
+}
+
+body.dark .filter form,
+body.dark .filter form input {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+
+.filter .dropdown {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 3px 8px 1px var(--black-shadow);
+  z-index: 1000;
+}
+
+.filter .dropdown input {
+  width: 100%;
+}
+
+body.dark .filter .dropdown {
+  box-shadow: 0px 3px 8px 1px var(--dark-shadow);
+}
+
+
+
+.filter .dropdown.active {
+  overflow: visible;
+}
+
+.filter .dropdown .expand__more {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}
+
+.filter .dropdown.active .expand__more {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.filter .dropdown input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: default;
+}
+
+body.dark .filter .dropdown input {
+  background-color: var(--dark-color);
+}
+
+.filter .dropdown ul {
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  background-color: var(--white-color);
+  padding: 10px;
+  border-radius: 8px;
+  top: 50px;
+  box-shadow: 0px 3px 8px 1px var(--black-shadow);
+}
+
+body.dark .filter .dropdown ul {
+  background-color: var(--dark-color);
+  box-shadow: 0px 3px 8px 1px var(--dark-shadow);
+}
+
+.filter .dropdown ul li {
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.filter .dropdown ul li:hover,
+.filter .dropdown ul li.active {
+  background-color: #e8e8e8;
+}
+
+body.dark .filter .dropdown ul li:hover {
+  background-color: var(--dark-shadow);
+}
